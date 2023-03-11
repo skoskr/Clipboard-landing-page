@@ -592,14 +592,6 @@ p {
   margin-bottom: 1.5rem;
 }
 
-.mr-0 {
-  margin-right: 0px;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
 .mt-12 {
   margin-top: 3rem;
 }
@@ -610,10 +602,6 @@ p {
 
 .mt-28 {
   margin-top: 7rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
 }
 
 .flex {
@@ -636,8 +624,8 @@ p {
   height: 2rem;
 }
 
-.w-128 {
-  width: 32rem;
+.h-64 {
+  height: 16rem;
 }
 
 .w-72 {
@@ -656,32 +644,12 @@ p {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-cols-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.grid-cols-6 {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
-.grid-rows-3 {
-  grid-template-rows: repeat(3, minmax(0, 1fr));
-}
-
 .flex-col {
   flex-direction: column;
 }
 
 .items-center {
   align-items: center;
-}
-
-.justify-start {
-  justify-content: flex-start;
-}
-
-.justify-end {
-  justify-content: flex-end;
 }
 
 .justify-center {
@@ -700,22 +668,16 @@ p {
   gap: 0.5rem;
 }
 
-.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+.space-x-8 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
-  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+  margin-right: calc(2rem * var(--tw-space-x-reverse));
+  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-14 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(3.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(3.5rem * var(--tw-space-y-reverse));
-}
-
-.space-x-8 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(2rem * var(--tw-space-x-reverse));
-  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .rounded-full {
@@ -770,9 +732,9 @@ p {
   padding-right: 1rem;
 }
 
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .px-9 {
@@ -795,21 +757,6 @@ p {
   padding-bottom: 2rem;
 }
 
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
-}
-
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -824,6 +771,10 @@ p {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pt-16 {
+  padding-top: 4rem;
 }
 
 .text-center {
@@ -905,9 +856,14 @@ p {
   width: 100%;
 }
 
-.before\:bg-\[url\(\'\/src\/images\/bg-header-mobile\.png\'\)\]::before {
+.before\:bg-\[url\(\'\.\/images\/bg-header-mobile\.png\'\)\]::before {
   content: var(--tw-content);
-  background-image: url('/src/images/bg-header-mobile.png');
+  background-image: url('./images/bg-header-mobile.png');
+}
+
+.before\:bg-\[url\(\'\.\.\/images\/bg-header-mobile\.png\'\)\]::before {
+  content: var(--tw-content);
+  background-image: url('../images/bg-header-mobile.png');
 }
 
 .before\:bg-cover::before {
@@ -920,9 +876,35 @@ p {
   background-repeat: no-repeat;
 }
 
+.before\:py-10::before {
+  content: var(--tw-content);
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .before\:opacity-50::before {
   content: var(--tw-content);
   opacity: 0.5;
+}
+
+.before\:opacity-10::before {
+  content: var(--tw-content);
+  opacity: 0.1;
+}
+
+.before\:opacity-80::before {
+  content: var(--tw-content);
+  opacity: 0.8;
+}
+
+.before\:opacity-90::before {
+  content: var(--tw-content);
+  opacity: 0.9;
+}
+
+.before\:opacity-100::before {
+  content: var(--tw-content);
+  opacity: 1;
 }
 
 .hover\:bg-indigo-400:hover {
@@ -991,16 +973,8 @@ p {
     flex-direction: row;
   }
 
-  .md\:justify-start {
-    justify-content: flex-start;
-  }
-
   .md\:justify-end {
     justify-content: flex-end;
-  }
-
-  .md\:justify-between {
-    justify-content: space-between;
   }
 
   .md\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
@@ -1033,13 +1007,14 @@ p {
     text-align: left;
   }
 
-  .md\:text-center {
-    text-align: center;
+  .md\:before\:bg-\[url\(\'\.\/images\/bg-header-desktop\.png\'\)\]::before {
+    content: var(--tw-content);
+    background-image: url('./images/bg-header-desktop.png');
   }
 
-  .md\:before\:bg-\[url\(\'\/src\/images\/bg-header-desktop\.png\'\)\]::before {
+  .md\:before\:bg-\[url\(\'\.\.\/images\/bg-header-desktop\.png\'\)\]::before {
     content: var(--tw-content);
-    background-image: url('/src/images/bg-header-desktop.png');
+    background-image: url('../images/bg-header-desktop.png');
   }
 
   .md\:before\:bg-center::before {
